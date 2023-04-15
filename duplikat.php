@@ -36,7 +36,7 @@ function duplikat_post_duplicate_action() {
 	global $wpdb;
 	if (empty($_GET['post']) == false) {
 		if (empty($_GET['action']) == false && $_GET['action'] == 'duplicate') {
-			if (current_user_can('edit_posts')) {
+			if (current_user_can('edit_posts') == true) {
 				check_admin_referer('duplicate_post');
 				$post_id = (int) $_GET['post'];
 				if ($post_id > 0) {
