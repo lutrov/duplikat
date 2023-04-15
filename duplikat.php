@@ -57,7 +57,7 @@ function duplikat_post_duplicate_action() {
 						);
 						$dupe_id = wp_insert_post($args);
 						if ($dupe_id > 0) {
- 								// Copy postmeta
+							// Copy postmeta
 							$meta = get_post_custom($post_id);
 	  						foreach ($meta as $key => $values) {
 								if (is_array($values) == true && count($values) > 0) {
